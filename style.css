@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --asphalt: #14140f;
-  --asphalt-raised: #1c1c15;
-  --checker-white: #f5f3ed;
-  --racing-red: #c8102e;
-  --steel: #8a8a7d;
-  --steel-dim: #5c5c52;
-  --caution: #e8b930;
-  --line: #2c2c22;
+  --paper: #f7f3e7;
+  --paper-raised: #fffcf3;
+  --ink: #262220;
+  --flame: #e35c1e;
+  --flame-dark: #c14a15;
+  --steel: #9a9186;
+  --steel-dim: #b8b0a2;
+  --checker-black: #201c1a;
+  --line: #e4dcc8;
 }
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+html { scroll-behavior: smooth; scroll-padding-top: 108px; }
 
 body {
   margin: 0;
-  background: var(--asphalt);
-  color: var(--checker-white);
+  background: var(--paper);
+  color: var(--ink);
   font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -29,24 +30,24 @@ body {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: var(--asphalt);
+  background: var(--paper);
   border-bottom: 1px solid var(--line);
 }
 
 .checker-stripe {
-  height: 6px;
+  height: 14px;
   width: 100%;
-  background-image: repeating-linear-gradient(
-    90deg,
-    var(--checker-white) 0 12px,
-    var(--asphalt) 12px 24px
+  background-image: conic-gradient(
+    var(--checker-black) 90deg, var(--paper) 90deg 180deg,
+    var(--checker-black) 180deg 270deg, var(--paper) 270deg
   );
+  background-size: 14px 14px;
 }
 
 .header-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 20px 24px 14px;
+  padding: 22px 24px 14px;
 }
 
 .brand-line {
@@ -57,21 +58,21 @@ body {
 }
 
 .brand-name {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 0.5px;
+  font-size: 30px;
+  letter-spacing: 0.2px;
   text-transform: uppercase;
-  color: var(--checker-white);
+  color: var(--ink);
 }
 
 .brand-sub {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 2px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--racing-red);
+  color: var(--flame);
 }
 
 .brand-meta {
@@ -94,24 +95,25 @@ body {
 
 .nav-pill {
   flex: 0 0 auto;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   font-weight: 600;
   font-size: 13px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: var(--steel);
+  color: var(--ink);
   text-decoration: none;
-  padding: 6px 14px;
-  border: 1px solid var(--line);
-  border-radius: 3px;
+  padding: 7px 15px;
+  border: 1.5px solid var(--ink);
+  border-radius: 20px;
   white-space: nowrap;
-  transition: color 0.15s, border-color 0.15s;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
 .nav-pill.active,
 .nav-pill:hover {
-  color: var(--checker-white);
-  border-color: var(--racing-red);
+  background: var(--flame);
+  color: var(--paper-raised);
+  border-color: var(--flame);
 }
 
 /* ---------- Main ---------- */
@@ -123,7 +125,7 @@ main {
 }
 
 .menu-section {
-  padding-top: 40px;
+  padding-top: 44px;
 }
 
 .section-heading {
@@ -134,25 +136,26 @@ main {
 }
 
 .section-number {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   font-weight: 700;
   font-size: 15px;
-  color: var(--racing-red);
+  color: var(--flame);
   letter-spacing: 1px;
 }
 
 .section-heading h2 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 23px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
   margin: 0;
+  color: var(--ink);
 }
 
 .item-list {
-  margin-top: 12px;
-  border-top: 1px solid var(--line);
+  margin-top: 14px;
+  border-top: 2px solid var(--ink);
 }
 
 .item-row {
@@ -160,12 +163,12 @@ main {
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
-  padding: 16px 0;
+  padding: 17px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .item-row.is-soldout {
-  opacity: 0.45;
+  opacity: 0.5;
 }
 
 .item-main {
@@ -182,7 +185,7 @@ main {
 .item-name {
   font-size: 16px;
   font-weight: 600;
-  color: var(--checker-white);
+  color: var(--ink);
 }
 
 .item-desc {
@@ -194,32 +197,32 @@ main {
 }
 
 .item-price {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   font-weight: 600;
   font-size: 17px;
-  color: var(--checker-white);
+  color: var(--flame-dark);
   white-space: nowrap;
   padding-top: 1px;
 }
 
 .tag {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  padding: 2px 7px;
-  border-radius: 2px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 3px 8px;
+  border-radius: 20px;
   text-transform: uppercase;
 }
 
 .tag-favorite {
-  background: var(--caution);
-  color: var(--asphalt);
+  background: var(--flame);
+  color: var(--paper-raised);
 }
 
 .tag-soldout {
   background: transparent;
-  color: var(--steel-dim);
+  color: var(--steel);
   border: 1px solid var(--steel-dim);
 }
 
@@ -232,19 +235,19 @@ main {
 }
 
 .footer-checker {
-  height: 6px;
+  height: 14px;
   width: 100%;
   margin-bottom: 24px;
-  background-image: repeating-linear-gradient(
-    90deg,
-    var(--checker-white) 0 12px,
-    var(--asphalt) 12px 24px
+  background-image: conic-gradient(
+    var(--checker-black) 90deg, var(--paper) 90deg 180deg,
+    var(--checker-black) 180deg 270deg, var(--paper) 270deg
   );
+  background-size: 14px 14px;
 }
 
 .footer-text {
   font-size: 12.5px;
-  color: var(--steel-dim);
+  color: var(--steel);
 }
 
 /* ---------- Responsive ---------- */
