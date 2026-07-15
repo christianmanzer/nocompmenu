@@ -2,18 +2,10 @@
 // No need to edit this file to change menu content.
 
 function renderMenu() {
-  const nav = document.getElementById('category-nav');
   const main = document.getElementById('menu-sections');
 
   MENU.forEach((section, i) => {
     const slug = slugify(section.category);
-
-    // nav pill
-    const navBtn = document.createElement('a');
-    navBtn.href = '#' + slug;
-    navBtn.className = 'nav-pill';
-    navBtn.textContent = section.category;
-    nav.appendChild(navBtn);
 
     // section
     const sectionEl = document.createElement('section');
@@ -23,7 +15,6 @@ function renderMenu() {
     const heading = document.createElement('div');
     heading.className = 'section-heading';
     heading.innerHTML = `
-      <span class="section-number">${String(i + 1).padStart(2, '0')}</span>
       <h2>${section.category}</h2>
     `;
     sectionEl.appendChild(heading);
@@ -58,21 +49,6 @@ function renderMenu() {
     main.appendChild(sectionEl);
   });
 
-  // active nav highlight on scroll
-  const sections = document.querySelectorAll('.menu-section');
-  const pills = document.querySelectorAll('.nav-pill');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        pills.forEach(p => p.classList.remove('active'));
-        const activePill = document.querySelector(`.nav-pill[href="#${entry.target.id}"]`);
-        if (activePill) activePill.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-
-  sections.forEach(s => observer.observe(s));
 }
 
 function slugify(str) {
