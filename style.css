@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
 
 :root {
   --paper: #f7f3e7;
@@ -20,7 +20,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -47,36 +47,17 @@ body {
 .header-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 22px 24px 14px;
+  padding: 18px 24px 14px;
 }
 
-.brand-line {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.brand-name {
-  font-family: 'Fredoka', sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  letter-spacing: 0.2px;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-
-.brand-sub {
-  font-family: 'Fredoka', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--flame);
+.brand-logo {
+  display: block;
+  height: 64px;
+  width: auto;
 }
 
 .brand-meta {
-  margin-top: 4px;
+  margin-top: 8px;
   font-size: 13px;
   color: var(--steel);
 }
@@ -95,7 +76,7 @@ body {
 
 .nav-pill {
   flex: 0 0 auto;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.5px;
@@ -136,7 +117,7 @@ main {
 }
 
 .section-number {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-weight: 700;
   font-size: 15px;
   color: var(--flame);
@@ -144,7 +125,7 @@ main {
 }
 
 .section-heading h2 {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-weight: 700;
   font-size: 23px;
   text-transform: uppercase;
@@ -197,7 +178,7 @@ main {
 }
 
 .item-price {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-weight: 600;
   font-size: 17px;
   color: var(--flame-dark);
@@ -206,7 +187,7 @@ main {
 }
 
 .tag {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -253,7 +234,7 @@ main {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 560px) {
-  .brand-name { font-size: 24px; }
+  .brand-logo { height: 46px; }
   .item-price { font-size: 15px; }
   .item-name { font-size: 15px; }
 }
