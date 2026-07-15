@@ -207,6 +207,27 @@ main {
   border: 1px solid var(--steel-dim);
 }
 
+/* ---------- Thank you note ---------- */
+
+.thank-you-note {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+}
+
+.thank-you-note p {
+  margin: 0;
+  padding: 24px;
+  border: 1.5px solid #2a2625;
+  border-radius: 0;
+  background: #ff5a00;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #2a2625;
+  text-align: center;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
